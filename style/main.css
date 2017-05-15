@@ -2,8 +2,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #faf8ef;
-  color: #776e65;
+  background: #ffffff;
+  color: #000000;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px; }
 
@@ -18,6 +18,10 @@ h1.title {
   margin: 0;
   display: block;
   float: left; }
+
+#night {
+  display: none;
+}
 
 @-webkit-keyframes move-up {
   0% {
@@ -50,14 +54,14 @@ h1.title {
 .score-container, .best-container {
   position: relative;
   display: inline-block;
-  background: #bbada0;
+  background: #ffffff;
   padding: 12px 20px;
   font-size: 25px;
   height: 25px;
   line-height: 47px;
   font-weight: bold;
-  border-radius: 3px;
-  color: white;
+  border: 2px solid #000000;
+  color: black;
   margin-top: 8px;
   text-align: center; }
   .score-container:after, .best-container:after {
@@ -69,22 +73,17 @@ h1.title {
     font-size: 13px;
     line-height: 13px;
     text-align: center;
-    color: #eee4da; }
+    color: #000000; }
   .score-container .score-addition, .best-container .score-addition {
+    display: none;
     position: absolute;
     right: 30px;
     color: red;
     font-size: 25px;
     line-height: 25px;
     font-weight: bold;
-    color: rgba(119, 110, 101, 0.9);
-    z-index: 100;
-    -webkit-animation: move-up 600ms ease-in;
-    -moz-animation: move-up 600ms ease-in;
-    animation: move-up 600ms ease-in;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    animation-fill-mode: both; }
+    color: #000000;
+    z-index: 100;}
 
 .score-container:after {
   content: "Score"; }
@@ -98,7 +97,8 @@ p {
   line-height: 1.65; }
 
 a {
-  color: #776e65;
+  color: #000000;
+  border: 2px solid #000000;
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
@@ -109,7 +109,7 @@ strong.important {
 
 hr {
   border: none;
-  border-bottom: 1px solid #d8d4d0;
+  border-bottom: 1px solid #000000;
   margin-top: 10px;
   margin-bottom: 10px; }
 
@@ -147,8 +147,7 @@ hr {
   -ms-user-select: none;
   -ms-touch-action: none;
   touch-action: none;
-  background: #bbada0;
-  border-radius: 6px;
+  background: #000000;
   width: 500px;
   height: 500px;
   -webkit-box-sizing: border-box;
@@ -157,19 +156,13 @@ hr {
   .game-container .game-message {
     display: none;
     position: absolute;
-    top: 0;
+    top: -1px;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(238, 228, 218, 0.5);
+    background: #ffffff;
     z-index: 100;
-    text-align: center;
-    -webkit-animation: fade-in 800ms ease 1200ms;
-    -moz-animation: fade-in 800ms ease 1200ms;
-    animation: fade-in 800ms ease 1200ms;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    animation-fill-mode: both; }
+    text-align: center;}
     .game-container .game-message p {
       font-size: 60px;
       font-weight: bold;
@@ -181,31 +174,25 @@ hr {
       margin-top: 59px; }
     .game-container .game-message a {
       display: inline-block;
-      background: #8f7a66;
-      border-radius: 3px;
+      background: #ffffff;
       padding: 0 20px;
       text-decoration: none;
-      color: #f9f6f2;
+      color: #000000;
       height: 40px;
       line-height: 42px;
       margin-left: 9px; }
       .game-container .game-message a.keep-playing-button, .game-container .game-message a.confirm-button, .game-container .game-message a.cancel-button, .game-container .game-message a.undo-move-button  {
         display: none; }
     .game-container .game-message.game-won {
-      background: rgba(237, 194, 46, 0.5);
-      color: #f9f6f2; }
+      background: #ffffff;
+      color: #000000; }
       .game-container .game-message.game-won a.keep-playing-button {
         display: inline-block; }
     .game-container .game-message.game-won, .game-container .game-message.game-over, .game-container .game-message.restart-game, .game-container .game-message.undo-move  {
       display: block; }
 
 .game-container .game-message.restart-game {
-   -webkit-animation: fade-in 400ms ease 100ms;
-   -moz-animation: fade-in 400ms ease 100ms;
-   animation: fade-in 400ms ease 100ms;
-   -webkit-animation-fill-mode: both;
-   -moz-animation-fill-mode: both;
-   animation-fill-mode: both; }
+}
 .game-container .game-message.restart-game .lower {
    margin-top: 85px; }
 .game-container .game-message.restart-game .lower a.confirm-button, .game-container .game-message.restart-game .lower a.cancel-button {
@@ -214,12 +201,7 @@ hr {
    display: none; }
 
 .game-container .game-message.undo-move {
-   -webkit-animation: fade-in 400ms ease 100ms;
-   -moz-animation: fade-in 400ms ease 100ms;
-   animation: fade-in 400ms ease 100ms;
-   -webkit-animation-fill-mode: both;
-   -moz-animation-fill-mode: both;
-   animation-fill-mode: both; }
+}
 .game-container .game-message.undo-move .lower {
    margin-top: 85px; }
 .game-container .game-message.undo-move .lower a.undo-move-button, .game-container .game-message.undo-move .lower a.cancel-button {
@@ -245,8 +227,7 @@ hr {
   height: 106.25px;
   margin-right: 15px;
   float: left;
-  border-radius: 3px;
-  background: rgba(238, 228, 218, 0.35); }
+  background: #ffffff; }
   .grid-cell:last-child {
     margin-right: 0; }
 
@@ -328,81 +309,67 @@ hr {
   transform: translate(363px, 363px); }
 
 .tile {
-  position: absolute;
-  -webkit-transition: 100ms ease-in-out;
-  -moz-transition: 100ms ease-in-out;
-  transition: 100ms ease-in-out;
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  transition-property: transform; }
+  position: absolute;}
   .tile .tile-inner {
-    border-radius: 3px;
-    background: #eee4da;
+    background: #ffffff;
     text-align: center;
     font-weight: bold;
     z-index: 10;
     font-size: 55px; }
   .tile.tile-2 .tile-inner {
-    background: #eee4da;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    background: #ffffff;}
   .tile.tile-4 .tile-inner {
-    background: #ede0c8;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    background: #ffffff;}
   .tile.tile-8 .tile-inner {
-    color: #f9f6f2;
-    background: #f2b179; }
+    color: #000000;
+    background: #ffffff; }
   .tile.tile-16 .tile-inner {
-    color: #f9f6f2;
-    background: #f59563; }
+    color: #000000;
+    background: #ffffff; }
   .tile.tile-32 .tile-inner {
-    color: #f9f6f2;
-    background: #f67c5f; }
+    color: #000000;
+    background: #ffffff; }
   .tile.tile-64 .tile-inner {
-    color: #f9f6f2;
-    background: #f65e3b; }
+    color: #000000;
+    background: #ffffff; }
   .tile.tile-128 .tile-inner {
-    color: #f9f6f2;
-    background: #edcf72;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+    color: #000000;
+    background: #ffffff;
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-128 .tile-inner {
         font-size: 25px; } }
   .tile.tile-256 .tile-inner {
-    color: #f9f6f2;
-    background: #edcc61;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+    color: #000000;
+    background: #ffffff;
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-256 .tile-inner {
         font-size: 25px; } }
   .tile.tile-512 .tile-inner {
-    color: #f9f6f2;
-    background: #edc850;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+    color: #000000;
+    background: #ffffff;
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-512 .tile-inner {
         font-size: 25px; } }
   .tile.tile-1024 .tile-inner {
-    color: #f9f6f2;
-    background: #edc53f;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+    color: #000000;
+    background: #ffffff;
     font-size: 35px; }
     @media screen and (max-width: 520px) {
       .tile.tile-1024 .tile-inner {
         font-size: 15px; } }
   .tile.tile-2048 .tile-inner {
-    color: #f9f6f2;
-    background: #edc22e;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    color: #000000;
+    background: #ffffff;
     font-size: 35px; }
     @media screen and (max-width: 520px) {
       .tile.tile-2048 .tile-inner {
         font-size: 15px; } }
   .tile.tile-super .tile-inner {
-    color: #f9f6f2;
-    background: #3c3a32;
+    color: #000000;
+    background: #ffffff;
     font-size: 30px; }
     @media screen and (max-width: 520px) {
       .tile.tile-super .tile-inner {
@@ -445,12 +412,7 @@ hr {
     -moz-transform: scale(1);
     transform: scale(1); } }
 .tile-new .tile-inner {
-  -webkit-animation: appear 200ms ease 100ms;
-  -moz-animation: appear 200ms ease 100ms;
-  animation: appear 200ms ease 100ms;
-  -webkit-animation-fill-mode: backwards;
-  -moz-animation-fill-mode: backwards;
-  animation-fill-mode: backwards; }
+}
 
 @-webkit-keyframes pop {
   0% {
@@ -498,13 +460,7 @@ hr {
     -moz-transform: scale(1);
     transform: scale(1); } }
 .tile-merged .tile-inner {
-  z-index: 20;
-  -webkit-animation: pop 200ms ease 100ms;
-  -moz-animation: pop 200ms ease 100ms;
-  animation: pop 200ms ease 100ms;
-  -webkit-animation-fill-mode: backwards;
-  -moz-animation-fill-mode: backwards;
-  animation-fill-mode: backwards; }
+  z-index: 20;}
 
 .above-game:after {
   content: "";
@@ -520,11 +476,11 @@ hr {
 
 .restart-button {
   display: inline-block;
-  background: #8f7a66;
-  border-radius: 3px;
+  background: #ffffff;
+  border: 2px solid #000000;
   padding: 0 20px;
   text-decoration: none;
-  color: #f9f6f2;
+  color: #000000;
   height: 40px;
   line-height: 42px;
   display: block;
@@ -535,17 +491,17 @@ hr {
 
 .undo-button {
   display: inline-block;
-  background: #8f7a66;
-  border-radius: 3px;
+  background: #ffffff;
+  border: 2px solid #000000;
   padding: 0 20px;
   text-decoration: none;
-  color: #f9f6f2;
+  color: #000000;
   height: 40px;
   line-height: 42px;
   display: block;
   text-align: center;
   float: right;
-  margin-left: 5px;
+  margin-left: 3px;
   font-size: 16px; }
 
 .game-explanation {
@@ -600,8 +556,7 @@ hr {
     -ms-user-select: none;
     -ms-touch-action: none;
     touch-action: none;
-    background: #bbada0;
-    border-radius: 6px;
+    background: #000000;
     width: 280px;
     height: 280px;
     -webkit-box-sizing: border-box;
@@ -614,15 +569,9 @@ hr {
       right: 0;
       bottom: 0;
       left: 0;
-      background: rgba(238, 228, 218, 0.5);
+      background: #ffffff;
       z-index: 100;
-      text-align: center;
-      -webkit-animation: fade-in 800ms ease 1200ms;
-      -moz-animation: fade-in 800ms ease 1200ms;
-      animation: fade-in 800ms ease 1200ms;
-      -webkit-animation-fill-mode: both;
-      -moz-animation-fill-mode: both;
-      animation-fill-mode: both; }
+      text-align: center;}
       .game-container .game-message p {
         font-size: 60px;
         font-weight: bold;
@@ -634,37 +583,26 @@ hr {
         margin-top: 59px; }
       .game-container .game-message a {
         display: inline-block;
-        background: #8f7a66;
-        border-radius: 3px;
+        background: #ffffff;
         padding: 0 20px;
         text-decoration: none;
-        color: #f9f6f2;
+        color: #000000;
         height: 40px;
         line-height: 42px;
         margin-left: 9px; }
         .game-container .game-message a.keep-playing-button, .game-container .game-message a.confirm-button, .game-container .game-message a.cancel-button, .game-container .game-message a.undo-move-button {
           display: none; }
       .game-container .game-message.game-won {
-        background: rgba(237, 194, 46, 0.5);
-        color: #f9f6f2; }
+        background: #ffffff;
+        color: #000000; }
         .game-container .game-message.game-won a.keep-playing-button {
           display: inline-block; }
       .game-container .game-message.game-won, .game-container .game-message.game-over, .game-container .game-message.restart-game, .game-container .game-message.undo-move  {
         display: block; }
 .game-container .game-message.restart-game {
- -webkit-animation: fade-in 400ms ease 100ms;
- -moz-animation: fade-in 400ms ease 100ms;
- animation: fade-in 400ms ease 100ms;
- -webkit-animation-fill-mode: both;
- -moz-animation-fill-mode: both;
- animation-fill-mode: both; }
+}
 .game-container .game-message.undo-move {
- -webkit-animation: fade-in 400ms ease 100ms;
- -moz-animation: fade-in 400ms ease 100ms;
- animation: fade-in 400ms ease 100ms;
- -webkit-animation-fill-mode: both;
- -moz-animation-fill-mode: both;
-  animation-fill-mode: both; }
+}
 .game-container .game-message.restart-game .lower {
   margin-top: 85px; }
  .game-container .game-message.restart-game .lower a.confirm-button, .game-container .game-message.restart-game .lower a.cancel-button {
@@ -695,8 +633,7 @@ hr {
     height: 57.5px;
     margin-right: 10px;
     float: left;
-    border-radius: 3px;
-    background: rgba(238, 228, 218, 0.35); }
+    background: #ffffff; }
     .grid-cell:last-child {
       margin-right: 0; }
 
