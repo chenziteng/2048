@@ -1,30 +1,26 @@
 # 2048
-A small clone of [1024](https://play.google.com/store/apps/details?id=com.veewo.a1024), based on [Saming's 2048](http://saming.fr/p/2048/) (also a clone).
 
-Made just for fun. [Play it here!](http://gabrielecirulli.github.io/2048/)
+A black & white themed fork of [uberspot's 2048](https://github.com/uberspot/2048) which itself is a fork of [gabrielecirulli's 2048](https://github.com/gabrielecirulli/2048).
 
-The official app can also be found on the [Play Store](https://play.google.com/store/apps/details?id=com.gabrielecirulli.app2048) and [App Store!](https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805)
+Made just for fun. [Play it here!](http://chenziteng.github.io/2048/)
 
-### Contributions
+### Kindle
 
- - [TimPetricola](https://github.com/TimPetricola) added best score storage
- - [chrisprice](https://github.com/chrisprice) added custom code for swipe handling on mobile
- - [elektryk](https://github.com/elektryk) made swipes work on Windows Phone
- - [mgarciaisaia](https://github.com/mgarciaisaia) added support for Android 2.3
+The theme fits eink display, and if you want to play it on your Amazon Kindle E-reader then,
 
-Many thanks to [rayhaanj](https://github.com/rayhaanj), [Mechazawa](https://github.com/Mechazawa), [grant](https://github.com/grant), [remram44](https://github.com/remram44) and [ghoullier](https://github.com/ghoullier) for the many other good contributions.
+* Simply visit http://chenziteng.github.io/2048/ by the built-in browser, or if you are too lazy to key in the long address, then
+* [Download this book](https://github.com/chenziteng/2048/blob/gh-pages/book/2048.mobi) and sideload it to the device, and then open the book and tap the hyperlink 2048 to start the game.
+
+Tip: some Kindle devices their browser doesn't supports swipe gesture, in this case try to tap the outermost cells to move, i.e. if we index the cells from left to right and top-down, assume that the indexing is zero-based, then
+* tap cell1/cell2 to move up,
+* tap cell4/cell8 to move left,
+* tap cell7/cell11 to move right,
+* tap cell13/cell14 to move down
 
 ### Screenshot
 
 ![](screenshots/screen01.png)
 
-## Contributing
-Changes and improvements are more than welcome! Feel free to fork and open a pull request. Please make your changes in a specific branch and request to pull into `master`! If you can, please make sure the game fully works before sending the PR, as that will help speed up the process.
-
-You can find the same information in the [contributing guide.](https://github.com/gabrielecirulli/2048/blob/master/CONTRIBUTING.md)
-
 ## License
-2048 is licensed under the [MIT license.](https://github.com/gabrielecirulli/2048/blob/master/LICENSE.txt)
 
-## Donations
-I made this in my spare time, and it's hosted on GitHub (which means I don't have any hosting costs), but if you enjoyed the game and feel like buying me coffee, you can donate at my BTC address: `1Ec6onfsQmoP9kkL3zkpB6c5sA4PVcXU2i`. Thank you very much!
+2048 is licensed under the [MIT license.](https://github.com/gabrielecirulli/2048/blob/master/LICENSE.txt)
